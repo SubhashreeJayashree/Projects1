@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="icon" href="images/icon.png" type="image" sizes="16x16">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="login_form_dark.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container">
+            <span class="navbar-brand" href="#" style="font-size: large;">Gobi Arts And Science College ChatBot</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="login-dark"> 
+        <form action='login_validation.html' method='POST'>
+            <div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>{{ message }}</strong> <br><small> Try again or forgot the password!</small>
+                        </div>
+            </div>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email" required/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password" pattern=".{8,}" required title="8 characters minimum">
+            </div>
+            </br>
+            <div class="form-group">
+                <button class="btn btn-block" data-bss-hover-animate="pulse" type="submit" style="background-color: #2980ef; color:white;">
+                    Log In
+                </button>
+            </div>
+        
+            <a class="forgot" href="register.html"> Create an Account </a>
+            <a class="forgot" href="forgot.html">Forgot your email or password?</a>
+        </form>
+    </section>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js'"></script>
+    <script src="bs-init.js"></script>
+</body>
+
+</html>
