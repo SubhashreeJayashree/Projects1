@@ -1,8 +1,9 @@
-from chatterbot import chatterbot
-from flask import Flask, render_template, request,session,logging,url_for,redirect,flash
+# from chatbot import chatbot
+from flask import Flask, render_template, request,session,redirect,flash
 from flask_recaptcha import ReCaptcha
 import mysql.connector
 import os
+from chatbot import chatbot
 
 app = Flask(__name__)
 recaptcha = ReCaptcha(app=app)
@@ -22,7 +23,7 @@ recaptcha.init_app(app)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 
 #database connectivity
-conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='candida1',database='register')
+conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='password',database='chatbot')
 cur=conn.cursor()
 
 # Google recaptcha - site key : 6LdbAx0aAAAAAANl04WHtDbraFMufACHccHbn09L
@@ -108,8 +109,9 @@ def logout():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')  
-    return str(chatbot.get_response(userText))
+    print(userText, chatbot.respond(userText))
+    return str(chatbot.respond(userText))
 
 if __name__ == "__main__":
     # app.secret_key=""
-    app.run() 
+    app.run(debug=True) 

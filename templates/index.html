@@ -3,25 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>GOBI ARTS AND SCIENCE COLLEGE - CHAT Bot</title>
-  <link rel="icon" href="images/icon.png" type="image" sizes="16x16">
+  <title>Gobi Arts and Science College Bot</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image" sizes="16x16">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="jquery.min.js"></script>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
-    <link rel="stylesheet" href="fonts/ionicons.min.css">
-    <link rel="stylesheet" href="animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="login_form_dark.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/Login-Form-Dark.css') }}">
 
 </head>
 
@@ -30,17 +28,16 @@
    
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!--a class="navbar-brand" href="#"> GASC Bot</a-->
-        <a class="navbar-brand" href="#" style="color:blueviolet;">
-          &emsp;<i class="fas fa-graduation-cap"></i> <b> &nbsp; GOBI ARTS AND SCIENCE COLLEGE - CHATBOT &emsp; </b></a>
+        <!--a class="navbar-brand" href="#">Gobi Arts and Science College Bot</a-->
+        <a class="navbar-brand" href="#" style="color: white;">
+          &emsp;<i class="fas fa-graduation-cap"></i> <b> &nbsp; Gobi Arts and Science College BOT &emsp; </b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
-            <li class="nav-item"><a class="nav-link" href="logout.html">Log Out</a></li>
+
             <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
 
             
@@ -51,7 +48,7 @@
             <li class="nav-item">
               <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Suggestion box</a>
             </li>
-            
+
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -65,7 +62,7 @@
                   <div class="modal-body">
                     <form action='/suggestion' method='POST'>
                       <div class="form-group">
-                        <input type="email" name='email' class='form-control' placeholder="Email" required>
+                        <input type="email" name='uemail' class='form-control' placeholder="Email" required>
                         <br>
                         <textarea class="form-control" id="message-text" placeholder="Enter your suggestion..." name="message" required></textarea>
                       </div>
@@ -83,31 +80,30 @@
               <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalScrollableTitle">Gobi Arts and Science College </h5>
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Fr Gobi Arts and Science College BOT </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-
                    <h3>About Us</h3>
-                   <div><img src="https://th.bing.com/th/id/R.3763ea9f73ad9cae3eebdd91cfa00302?rik=A5mOn53U85jQMQ&riu=http%3a%2f%2fwww.gascgobi.ac.in%2fiqac%2fgasc_files%2flogo1.png&ehk=aYFYODBD7QMYI%2ffbO%2fIGhfnZZxwJR6ysleK3ebn8ruQ%3d&risl=&pid=ImgRaw&r=0" height="auto" width="100%" style="border: 3px solid black;"></div>
+                   <div><img src="http://www.frcrce.ac.in/images/Gobi Arts and Science College/about/college-with-clouds.jpg" height="auto" width="100%" style="border: 3px solid black;"></div>
                     <br> <br>
-                   <p style="text-align: justify;">Gobi Arts and Science College (Gobi Arts College) is an autonomous institution affiliated to Bharathiar University located in Gobichettipalayam, Tamil Nadu, India. It was founded in 1968 by K. M. Ramaswamy Gounder.</p>
+                   <p style="text-align: justify;">Located in Gobichettipalayam, Gobi Arts and Science College is one of the renowned, premier and sought-after private Engineering colleges. The Institute is dedicated to making a difference in Engineering education, with its exclusive approach towards the ongoing momentum of trends in technology and holistic development.
 
-                    <p style="text-align: justify;">The college was established in 1968 affiliated to Madras University, Chennai. Later, the college became affiliated to Bharathiar University, Coimbatore. It is a co-educational grant-in-aid institution managed by the Gobi Arts College Council, registered on 25.8.1967 under the Societies Registration Act, XXI of 1860. The college was started with the noble objective of opening the doors of higher education to the poor and meritorious students who are mostly first generation students coming from agricultural families.</p>
+                    <p style="text-align: justify;">Beginning with an orphanage (BalBhavan) and a trade school in carpentry, the Agnel Ashram (set up in 1957 at Bandra, Mumbai) has today grown into a full-fledged Technical Complex. The Institute today proudly bears the founder's name as a fitting tribute to his impassioned faith in highly-qualified and fully-trained engineers and technicians in the service of the nation.</p>
                     
-                    <p style="text-align: justify;">The Institute started with only one programme in Production Engineering in 1984 with an intake capacity of 60 students. In 1987, the programme in Science was started with an intake capacity of 60 students followed by Computer Science in 1991 with an intake capacity of 60 students. In 2001, the programme in Information Technology was started with an intake capacity of 30 students which was later increased to 60 in 2010. The College started offering Master’s Degree in Electronics Engineering and Mechanical Engineering in the year 2005, each having an intake capacity of 18. Doctoral programs in Electronics Engineering and Mechanical Engineering commenced in 2014 and 2015 respectively. From the year 2022, a new Undergraduate degree programme in Mechanical Engineering has been started with an intake capacity of 60. Also, the BE undergraduate programme in Electronics Engineering has been changed to Electronics and Computer Science. The Undergraduate programme in Information Technology has been merged with Computer Engineering. From the year 2022, college is offering new undergraduate programme in the emerging area of ‘AI & Data Science’.</p>
+                    <p style="text-align: justify;">The Institute started with only one programme in Production Engineering in 1984 with an intake capacity of 60 students. In 1987, the programme in Electronics Engineering was started with an intake capacity of 60 students followed by Computer Engineering in 1991 with an intake capacity of 60 students. In 2001, the programme in Information Technology was started with an intake capacity of 30 students which was later increased to 60 in 2010. The College started offering Master’s Degree in Electronics Engineering and Mechanical Engineering in the year 2005, each having an intake capacity of 18. Doctoral programs in Electronics Engineering and Mechanical Engineering commenced in 2014 and 2015 respectively. From the year 2019, a new Undergraduate degree programme in Mechanical Engineering has been started with an intake capacity of 60. Also, the BE undergraduate programme in Electronics Engineering has been changed to Electronics and Computer Science. The Undergraduate programme in Information Technology has been merged with Computer Engineering. From the year 2020, college is offering new undergraduate programme in the emerging area of ‘AI & Data Science’.</p>
 
-                    <p style="text-align: justify;">Based on the Outcome-based Education (OBE) parameters and criteria, three programmes of the Institute have been accredited by National Board of Accreditation (NBA-India) for a period of three years valid until June 1968.</p>
+                    <p style="text-align: justify;">Based on the Outcome-based Education (OBE) parameters and criteria, three programmes of the Institute have been accredited by National Board of Accreditation (NBA-India) for a period of three years valid until June 2022.</p>
 
-                    <p style="text-align: justify;">The Institute has been consistently ranked highly in major surveys like the NIRF, TOI, INDIA TODAY to name a few. The college is ranked among the top 300 Science institutes of the country by NIRF 2020, conducted by MHRD. Based on the Outcome-Based Education (OBE) parameters and criteria, three programmes of the institute have been accredited by the National Board of Accreditation (NBA-India) form 2017. The current accreditation is valid until June 2023. The college is also a NAAC accredited. In addition, the Institute has been consistently ranked highly by reputed surveys like TOI, India Today, The Week, Education World to name a few.</p>
+                    <p style="text-align: justify;">The Institute has been consistently ranked highly in major surveys like the NIRF, TOI, INDIA TODAY to name a few. The college is ranked among the top 300 Engineering institutes of the country by NIRF 2020, conducted by MHRD. Based on the Outcome-Based Education (OBE) parameters and criteria, three programmes of the institute have been accredited by the National Board of Accreditation (NBA-India) form 2017. The current accreditation is valid until June 2023. The college is also a NAAC accredited. In addition, the Institute has been consistently ranked highly by reputed surveys like TOI, India Today, The Week, Education World to name a few.</p>
                     <h3>Contact Us</h3>
                     
                     <ul>
                     
-                    <li style = "margin-left:15px">Email: gascgobi@gmail.com</li>
-                    <li style = "margin-left:15px">By phone: +91 1234567890 😊 </li>
+                    <li style = "margin-left:15px">Email: group3cgl@gmail.com</li>
+                    <li style = "margin-left:15px">By Candida, Gini & Lizel 😊 </li>
                     </ul>
                   </div>
                   <div class="modal-footer">
@@ -116,33 +112,44 @@
                 </div>
               </div>
             </div>
-            
+            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
             
           </ul>
         </div>
     
    
     </nav>
+    <!--header class="msger-header">
+      <div class="msger-header-title">
+        <h5><i class="fas fa-graduation-cap"></i> <b> &emsp; Gobi Arts and Science College BOT &emsp; </b><i class="fas fa-graduation-cap"></i></h5>
+      </div>
+    </header-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
     <div class="alert alert-success alert-dismissible" id="alert" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <strong>{{ message }}</strong>
     </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
    
    
-    <main class="msger-chat" style="color: green;">
+    <main class="msger-chat" style="color: white;">
     </br>
       <div class="msg left-msg">       
         <div class="msg-img" style = "background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByXho41yToOFz5UcHHwct3X-OWwkft_akfA&usqp=CAU)">
         </div>
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name"><b>GOBI ARTS AND SCIENCE COLLEGE - CHAT BOT</b> </div>
+            <div class="msg-info-name"><b>Gobi Arts and Science College BOT</b> </div>
           </div>      
               
-          <div class="msg-text" style="color: green;">
-            <b >Hi there, Welcome to Gobi Arts And Science College Enquiry ChatBot! 👋 If you need any assistance, I'm always here.
+          <div class="msg-text" style="color: white;">
+            <b >Hi there, Welcome to  Gobi Arts and Science College! 👋 If you need any assistance, I'm always here.
           </div>
         </div>
       </div> 
@@ -151,10 +158,10 @@
         </div>
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name"> <b>Gobi Arts And Science College Chat Bot</b></div>
+            <div class="msg-info-name"> <b>Gobi Arts and Science College BOT</b></div>
           </div>      
               
-          <div class="msg-text" style="color: red;">
+          <div class="msg-text" style="color: white;">
            Which of the following user groups do you belong to?
             
               <br><br>1.&emsp;Student's Section Enquiry.</br>2.&emsp;Faculty Section Enquiry. </br>3.&emsp;Parent's Section Enquiry.</br>4.&emsp;Visitor's Section Enquiry.</br>
@@ -167,7 +174,7 @@
     </main>
 
     <form class="msger-inputarea">
-      <input type="text" class="msger-input" id="textInput" placeholder="Enter your enquiry here...">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your enquiry number...">
       <button type="submit" class="msger-send-btn">Send</button>
     </form>
   </section>
@@ -191,7 +198,7 @@
     // Icons made by Freepik from www.flaticon.com
     const BOT_IMG = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByXho41yToOFz5UcHHwct3X-OWwkft_akfA&usqp=CAU";
     const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-    const BOT_NAME = "Gobi Arts And Science College Chat Bot";
+    const BOT_NAME = "Gobi Arts and Science College Bot";
     const PERSON_NAME = "You";
 
     msgerForm.addEventListener("submit", event => {
@@ -265,4 +272,3 @@
 </body>
 
 </html>
-
