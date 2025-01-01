@@ -143,10 +143,8 @@ body {
 }
 .msger-send-btn {
   margin-left: 10px;
-
-  /*background: rgb(0, 196, 65);*/
   background-image: linear-gradient(to right, #4568dc, #b06ab3);
-  color: black;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.23s;
@@ -157,5 +155,22 @@ body {
 }
 
 .msger-chat {
+  image-rendering: auto;
   background-color: black;
 }
+
+
+#voice-btn {
+  background-image: linear-gradient(to right, #4568dc, #b06ab3);
+  color: white;
+  padding: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+
+#voice-btn:hover {
+  background-image: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+

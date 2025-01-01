@@ -23,7 +23,7 @@ recaptcha.init_app(app)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 
 #database connectivity
-conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='password',database='chatbot')
+conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='your_password',database='chatbot')
 cur=conn.cursor()
 
 # Google recaptcha - site key : 6LdbAx0aAAAAAANl04WHtDbraFMufACHccHbn09L
@@ -45,9 +45,22 @@ def login():
 def about():
     return render_template('register.html')
 
+
 @app.route('/forgot')
 def forgot():
     return render_template('forgot.html')
+
+@app.route('/admission')
+def admission():
+    return render_template('admission.html')
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
+
+
+@app.route('/fees structure')
+def fees():
+    return render_template('fees structure.html')
 
 @app.route('/login_validation',methods=['POST'])
 def login_validation():
